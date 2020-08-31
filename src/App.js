@@ -126,7 +126,7 @@ export default class App extends React.Component{
               <h4>{this.state.death}</h4>
           </div>
           <div className="box total">
-              <h3>Total</h3>
+              <h3>Total Active Cases</h3>
               <h4>{this.state.total}</h4>
           </div>
           </div>
