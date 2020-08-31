@@ -25,10 +25,10 @@ export default class App extends React.Component{
 
   async getData(){
       const resApi = await Axios.get("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise/");
-      const resStates = await Axios.get("https://covid19-india-adhikansh.herokuapp.com/states");
+      const resStates = await Axios.get("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise/");
       const states = [];
-      for(var i = 0; i < resStates.data.state.length; i++){
-          states.push(resStates.data.state[i].name);
+      for(var i = 0; i < resStates.data.data.statewise.length; i++){
+          states.push(resStates.data.data.statewise[i].state);
       }
       //const res = await Axios.get(`https://covid19-india-adhikansh.herokuapp.com/state/${states[0]}`);
 
