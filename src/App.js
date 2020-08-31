@@ -30,12 +30,10 @@ export default class App extends React.Component{
       for(var i = 0; i < resStates.data.data.statewise.length; i++){
           states.push(resStates.data.data.statewise[i].state);
       }
-      //const res = await Axios.get(`https://covid19-india-adhikansh.herokuapp.com/state/${states[0]}`);
-
+      
     let res = resApi.data.data.statewise.filter(d => 
-        {return d.state.match(states[0])});
+        {return d.state.match(states.slice()[0])});
 
-      //const countries = Object.keys(resCountries.data.countries);
       this.setState({
         confirmed:res[0].confirmed,
         cured:res[0].recovered,
