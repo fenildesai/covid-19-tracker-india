@@ -1,3 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple Corona virus tracker for India which will give you number of recoveries & deaths.
 
-A simple React app which fetches data from a 3rd party API to show the latest count of corona cases in India along with option to check data for different states of India.
+The application is built using React.
